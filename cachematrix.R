@@ -1,3 +1,5 @@
+## makeCacheMatrix
+
 ## Matrix inversion is usually a costly computation and their 
 ## may be some benefit to caching the inverse of a matrix rather 
 ## than compute it repeatedly. This source file contains a pair 
@@ -34,6 +36,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## This function computes the inverse of the special "matrix" returned by 
 ##  makeCacheMatrix above. If the inverse has already been calculated 
 ##  (and the matrix has not changed), then it retrieve the inverse from the cache.
+
+## This function "solves" the inverse of the matrix and sets it to the special matrix
 cacheSolve <- function(x, ...) {
     ## Look at cache to see if inverse exists
     inv <- x$getInverse()
